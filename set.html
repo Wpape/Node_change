@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var s1 = new Set([1,12,32,12,43,54,32,345,456,2,1,1])
+
+    //添加 如果新添加的值 在原来对象中已经存在 新增无效
+    s1.add(1)
+    //删除
+    s1.delete(1)
+    //判断食肉存在某个值，存在返回true 不存在返回false
+    console.log('',s1.has(12));
+    //删除所有
+    s1.clear()
+    console.log('',s1);
+
+    console.log('',[...new Set([1,2,3,4,5,6,7,5,4,3,2,1])]);
+</script>

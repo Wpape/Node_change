@@ -1,0 +1,7 @@
+官网:https://nodejs.cn/
+Node.js 是一个开源的、跨平台的 JavaScript 运行时环境。
+
+node.js 是js的后端运行环境
+浏览器    是js的前端网页运行环境
+
+node.js和浏览器运行js的区别:node.js 不支持DOM BOM操作 ,支持逻辑运算,函数  json  对象 数组 等操作....

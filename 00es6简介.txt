@@ -1,0 +1,40 @@
+﻿es6: ECMA script 6
+
+ECMAScript 是javascript的一种语法标准
+
+es6 第六版js语法     
+
+ECMA : European Computer Manufacturers Association，欧洲计算机制造商协会。负责javascript语言标准的制定。
+
+截止目前，各大浏览器都已经实现了es6标准的90%以上。nodejs几乎完全支持es6。
+
+参考教程: https://es6.ruanyifeng.com/
+
+1, 块级作用域 let  
+
+2, 常量  const 
+
+3, 字符串模板
+
+4, 箭头函数
+
+5, 参数的默认值
+
+6, 遍历数组和对象
+
+7, 对象的字面量创建
+
+8, 对象数组的解构赋值
+
+9, 对象数组的拼接
+
+10, 类的创建与继承
+
+12, Promise
+
+11, fetch请求
+
+13, async函数
+
+14, ES6模块化 
+

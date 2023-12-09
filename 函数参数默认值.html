@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function add(a,b){
+    //     console.log('',a+b);
+    // }
+    // add()
+    // add(1,)
+    // add(1,2)
+    // add(1,2,3)
+
+    //es5中使用||设置默认值
+    // function add(a,b){
+    //     a = a||0,b=b||0
+    //     console.log('',a+b);
+    // }
+    // add()
+    // add(1,)
+    // add(1,2)
+    // add(1,2,3)
+
+    //es6中使用初始化形参设置默认值
+    // function add(a = 0,b = 0){
+    //     console.log('',a+b);
+    // }
+    // add()
+    // add(1,)
+    // add(1,2)
+    // add(1,2,3)
+
+    // function add(){ 
+    //     Array.from(arguments).forEach(item=>{
+    //         console.log('',item);
+    //     })        
+    // }
+    // add()
+    // add(1,)
+    // add(1,2)
+    // add(1,2,3)
+
+    //es6 通过...形参 获取参数数组
+    function add(...arr){ 
+        console.log('',arr);
+       arr.forEach(item=>{
+            // console.log('',item);
+        })        
+    }
+    add()
+    add(1,)
+    add(1,2)
+    add(1,2,3)
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=PDF转化器, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;height: 100px;border: 1px solid black;display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button><button>2</button><button>3</button><button>4</button>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</body>
+</html>
+<script>
+    var divs = document.querySelectorAll('div')
+    var buttons = document.querySelectorAll('button')
+    divs[0].style.display = 'block'
+
+    var j = 0
+    for(let i = 0;i < buttons.length;i++){
+        buttons[i].onclick = function(){
+            j = i;
+    divs[i].style.display = 'block'
+        }
+    }
+</script>

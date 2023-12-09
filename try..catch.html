@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //try 尝试 catch 捕获 throw 抛出
+
+    try{
+        console.log('',age/0);
+    }catch (error){
+        console.log('',error);
+    }finally{
+        console.log('无论是否有错误，都会执行');
+    }
+
+    console.log('执行');
+
+    function checkAge(age){
+        if(age>125){
+            throw new Error('你输入的年龄不合法')
+        }
+        return age+'岁'
+    }
+    console.log('',checkAge(130));
+</script>

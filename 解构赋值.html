@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var array = ['张三','李四','王五'];
+    //通过数组中的数据 需要i通过索引取值
+    // var name1 = array[0]
+    
+    //es6 允许按照一定的模式 从数组/对象中提取值，对变量进行赋值，被称之为解构赋值
+
+    //数组的解构
+    let [name1, name2, name3] = array;
+    console.log('',name1,name2,name3);
+
+    let [num1,...num2] = array
+    console.log('',num1);
+    console.log('',num2);
+    
+
+    //数组赋值
+    var array2 = ['a','b','c']
+
+    //将array2拼接到array
+
+    //方法1
+    // array.forEach(item =>{
+    //     array.push(item)
+    // })
+    // console.log('',array);
+
+    //方法2
+    // array=array.count(array2)
+    // console.log('',array);
+
+      //方法3
+      array.push(...array2);
+      console.log('',array);
+
+
+      //对象解构
+
+      var student = {
+        name:'张三',
+        age:12,
+        sex:'男'
+      }
+
+      var{name,age,sex} = student;
+      console.log('',name,age,sex);
+
+      //由于对象中的数据从是没有顺序的，所以对象解构无需把所有的属性都用上，可以按照需要定义变量读取某一个或者几个属性，单数必须保证变量的名字和对象的属性名完全相同
+      var {name ,age,sec} = student
+      console.log('',name,age,sex);
+
+      //对象赋值
+    var prople = {
+        height:180,
+        weight:120,
+        ...student
+    }
+    console.log('',prople);
+</script>

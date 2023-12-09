@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    //es5中构造函数的写法
+
+    function People(name){
+        this.name = name
+    }
+    new People('张三')
+
+    //es6中吧构造函数做了进一步的封装和优化 叫做 类
+    //类相当于是构造函数的变体 他内部也是构造函数解构，都用于创建对象
+
+    class People2{
+        //每一个类都有一个构造器 相当于是构造函数
+        constructor(name,age){
+            this.name = name,
+            this.age = age
+        }
+        //写道构造器外部，每一个对象的此属性都相同
+        sex = '男'
+        eat(){
+            console.log('吃饭');
+        }
+    }
+    var n1 = new People2('李四',18)
+    var n1 = new People2('王五',10)
+
+    //类的继承：基于构造函数和原型的继承，但类的继承已经内部实现了原型继承，所以使用类时，不必考虑半圆形 使用extends 实现类的继承
+
+    class Student extends People2{
+        constructor(name,age,phone){
+            super(name,age) //super 指向父类的构造函数 调用之后即可继承父类的属性
+            this.phone = phone
+        }
+    }
+    console.log('',new Student('susan',20,110).name);
+
+    /*
+    总结：关于es5构造函数 es6类
+    1.类是基于构造函数的，是对构造函数的一个封装
+    2.类可以像构造函数一样继承。而且无需再考虑原型的继承
+    3.一个类只能继承一次 只能有一个父类，但是可以拥有多个子类
+    */
+</script>

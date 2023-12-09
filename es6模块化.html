@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIyNjU3NjQzNw==&hid=3&sn=8008f83e62cc57d3d61faa0c568f2566&scene=18#wechat_redirect"></a>
+</body>
+</html>
+<script>
+    //模块化：把整体的js文件或者代码，通过功能性分割成多个js文件或者模块化，这样每一个js文件都统称为一个模块，然后通过固定的语法导入/导出。把多个js文件联系到与i其，这样操作就叫做模块化
+
+    //特点：各个模块之作用域是相互隔离的，互不影响
+
+    //前端模块化：使用es6语法在浏览器端实现模块化
+    //export default 导出
+    //import from 导入
+
+
+     import { count } from './模块化导出.js'
+
+    //后端模块化：使用node语法在服务端实现模块化
+    //modules.extends 导出
+    //require() 导入
+
+    //问题：html文件使用script导入js文件算不算模块化？
+    //答案：不算，因为模块化有一个显著的特点，是作用域隔离，各个模块的作用域是相互独立，互不干扰，使用script引入js文件，相当于是把所有的js文件拼接到一起，共享一个作用域，这种操作不要能称之为模块化
+
+
+    
+</script>

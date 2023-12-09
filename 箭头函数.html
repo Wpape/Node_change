@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击触发</button>
+</body>
+</html>
+<script>
+    //具名函数
+    function add(){
+
+    }
+
+    //匿名函数（箭头函数）
+    var add = (count)=>{
+        return ++count
+
+    }
+
+    //如果函数只有一个参数，可以省略（），如果没有参数或者有多个参数（）就不能省略
+    var add = count =>{
+        return ++count
+    }
+
+    //如果箭头函数的函数体只有一句代码 且return返回的画 return 和{} 丢可以省略不写
+    var add = count => ++count
+    btn.onclick = function(){
+        console.log('this',this);
+
+        //在计数器中this会被还原回window
+        // setTimeout(function(){
+        //     console.log('',this);
+        // },100)
+
+        //使用箭头函数会保留this指向，使this指向和外部的相同
+        setTimeout(()=>{
+            console.log('',this);
+        },100)
+    }
+
+
+    var student = {
+        name:'张三',
+        age:20,
+        //es5函数的写法 this指向当前对象
+        // eta:function(){
+        //     console.log('',this);
+        // },
+        //es6箭头函数的写法 其中this指向对象上下文（全局作用域）
+        // eta:()=>{
+        //     console.log('',this);
+        // },
+        //es6新增的对象函数的写法
+        eat(){
+            console.log('重新指回当前对象',this);
+        }
+    }
+
+    //箭头i函数的作用
+    //1.简化匿名函数的结构
+    //2.在时间处理函数或着计时器中保留this指向
+    //3.在对象中简化函数
+    student.eat()
+</script>
